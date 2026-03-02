@@ -11,7 +11,7 @@ import country from "../../public/navbar-images/united kingdom.png";
 const Navbar = () => {
   return (
     <header>
-      <nav className="shadow-2xl shadow-gray-500/5">
+      <nav className="border-b-3 border-b-gray-100">
         {/* Upper Nav */}
         <div className="flex mx-10 py-3 items-center justify-between">
           <Image src={logo} alt="logo"></Image>
@@ -53,7 +53,7 @@ const Navbar = () => {
         {/* Lower nav */}
         <div className="flex my-2 justify-between lg:mx-7">
           <div className="flex gap-2">
-            <div className="flex self-center py-3.5 px-3 pr-40 bg-gray-100 font-bold text-gray-600">
+            <div className="flex self-center mx-3 py-3.5 px-3 pr-40 bg-gray-100 font-bold text-gray-600">
               <Image className="mx-1" src={menu} alt="menu-icon"></Image>
               <span>CATEGORY</span>
             </div>

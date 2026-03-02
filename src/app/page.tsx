@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar";
-import Hero from "../components/sections/Hero";
+import { Hero,Product } from "../components/sections";
 
 const page = () => {
   return (
@@ -7,6 +7,7 @@ const page = () => {
       <Navbar />
       <main>
         <Hero />
+        <Product />
       </main>
     </>
   );

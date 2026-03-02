@@ -8,7 +8,7 @@ import support from "../../../public/services-images/support.png";
 const Hero = () => {
   return (
     <section>
-      <div className="my-5 lg:mx-15">
+      <div className="my-5 lg:mx-10">
         <Image src={hero} alt="company's visual"></Image>
       </div>
       <div className="flex gap-10 mt-15 justify-around lg:px-60">
