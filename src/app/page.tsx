@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar";
-import { Hero, Product, Origin, News } from "../components/sections";
+import { Hero, Product, Origin, News, Partner } from "../components/sections";
 
 const page = () => {
   return (
@@ -10,6 +10,7 @@ const page = () => {
         <Product />
         <Origin />
         <News />
+        <Partner />
       </main>
     </>
   );
