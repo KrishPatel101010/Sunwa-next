@@ -1,17 +1,22 @@
 import Image from "next/image";
+import Link from "next/link";
+import cart from "../../public/navbar-images/cart.png";
 import logo from "../../public/navbar-images/header-logo.png";
+import home from "../../public/navbar-images/house.png";
+import invoice from "../../public/navbar-images/invoice.png";
+import menu from "../../public/navbar-images/menu.png";
 import search from "../../public/navbar-images/search-icon.png";
 import country from "../../public/navbar-images/united kingdom.png";
-import Link from "next/link";
 
 const Navbar = () => {
   return (
     <header>
-      <nav>
+      <nav className="shadow-2xl shadow-gray-500/5">
+        {/* Upper Nav */}
         <div className="flex mx-10 py-3 items-center justify-between">
           <Image src={logo} alt="logo"></Image>
           <div className="flex">
-            <ul className="flex font-semibold list-none">
+            <ul className="flex self-center font-semibold list-none">
               <li className="px-10 text-primary border-r border-r-black">
                 <Link href="/">HOME</Link>
               </li>
@@ -31,18 +36,42 @@ const Navbar = () => {
                 <Link href="/">DOCUMENTS</Link>
               </li>
             </ul>
-            <Image className="mx-2" src={search} alt="search-icon"></Image>
+            <Image src={search} alt="search-icon"></Image>
             <Image
               className="py-3 ml-4 mr-1"
               src={country}
               alt="country-flag"
             ></Image>
             <select name="language-selector">
-              <option selected value="english">
+              <option defaultValue="english" value="english">
                 English
               </option>
               <option value="hindi">Hindi</option>
             </select>
+          </div>
+        </div>
+        {/* Lower nav */}
+        <div className="flex my-2 justify-between lg:mx-7">
+          <div className="flex gap-2">
+            <div className="flex self-center py-3.5 px-3 pr-40 bg-gray-100 font-bold text-gray-600">
+              <Image className="mx-1" src={menu} alt="menu-icon"></Image>
+              <span>CATEGORY</span>
+            </div>
+            <div className="flex self-center">
+              <Image src={home} alt="home-icon"></Image>
+              <span className="text-gray-500">Home</span>
+            </div>
+          </div>
+          <div className="flex font-medium lg:gap-5">
+            <div className="flex gap-2 self-center">
+              <Image src={invoice} alt="invoice-icon"></Image>
+              <span className="self-center">Request a quote</span>
+            </div>
+            <div className="flex gap-2 self-center">
+              <Image src={cart} alt="cart-icon"></Image>
+              <span className="self-center">Cart</span>
+            </div>
+            <button type="button">Login</button>
           </div>
         </div>
       </nav>
