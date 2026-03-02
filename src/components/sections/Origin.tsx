@@ -39,7 +39,7 @@ const Origin = () => {
           </div>
         </div>
         <div className="flex-1 relative">
-          <Image src={origin} alt="Sunva" fill className="object-center"></Image>
+          <Image src={origin} alt="Sunva" fill className="object-cover object-[60%_50%]"></Image>
         </div>
       </div>
     </section>
