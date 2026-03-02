@@ -1,5 +1,11 @@
+import Navbar from "../components/Navbar";
+
 const page = () => {
-  return <div className="text-6xl">page</div>;
+  return (
+    <>
+      <Navbar/>
+    </>
+  );
 };
 
 export default page;
