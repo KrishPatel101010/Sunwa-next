@@ -7,6 +7,7 @@ import {
   Partner,
   Promotion,
 } from "../components/sections";
+import Footer from "../components/Footer";
 
 const page = () => {
   return (
@@ -20,6 +21,7 @@ const page = () => {
         <Partner />
         <Promotion />
       </main>
+      <Footer />
     </>
   );
 };
