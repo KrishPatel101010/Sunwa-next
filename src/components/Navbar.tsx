@@ -8,6 +8,19 @@ import menu from "../../public/navbar-images/menu.png";
 import search from "../../public/navbar-images/search-icon.png";
 import country from "../../public/navbar-images/united kingdom.png";
 
+type NavItem = {
+  label: string;
+  href: string;
+};
+
+const NAV_ITEMS: NavItem[] = [
+  { label: "HOME", href: "/" },
+  { label: "INTRODUCE", href: "/" },
+  { label: "PRODUCTS", href: "/" },
+  { label: "NEWS", href: "/" },
+  { label: "CONTACT", href: "/" },
+  { label: "DOCUMENTS", href: "/" },
+];
 const Navbar = () => {
   return (
     <header>
@@ -17,24 +30,18 @@ const Navbar = () => {
           <Image src={logo} alt="logo" className="flex self-center"></Image>
           <div className="flex">
             <ul className="flex flex-col lg:flex-row self-center font-semibold list-none">
-              <li className="lg:px-10 text-primary lg:border-r border-r-black">
-                <Link href="/">HOME</Link>
-              </li>
-              <li className="lg:px-10 lg:border-r border-r-black">
-                <Link href="/">INTRODUCE</Link>
-              </li>
-              <li className="lg:px-10 lg:border-r border-r-black">
-                <Link href="/">PRODUCTS</Link>
-              </li>
-              <li className="lg:px-10 lg:border-r border-r-black">
-                <Link href="/">NEWS</Link>
-              </li>
-              <li className="lg:px-10 lg:border-r border-r-black">
-                <Link href="/">CONTACT</Link>
-              </li>
-              <li className="lg:px-10">
-                <Link href="/">DOCUMENTS</Link>
-              </li>
+              {NAV_ITEMS.map((item, index) => (
+                <li
+                  key={item.label}
+                  className={`lg:px-10 ${
+                    index !== NAV_ITEMS.length - 1
+                      ? "lg:border-r border-r-black"
+                      : ""
+                  } ${index === 0 ? "text-primary" : ""}`}
+                >
+                  <Link href={item.href}>{item.label}</Link>
+                </li>
+              ))}
             </ul>
             <Image
               src={search}
