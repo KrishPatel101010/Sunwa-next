@@ -11,11 +11,12 @@ import founder3 from "../../public/footer-images/founders-names-images/Sản ph�
 import founder4 from "../../public/footer-images/founders-names-images/Tin tức.png";
 import founder5 from "../../public/footer-images/founders-names-images/Liên hệ.png";
 import founder6 from "../../public/footer-images/founders-names-images/tài liệu.png";
+// import list from "../../public/footer-images/list-style.png";
 
 const Footer = () => {
   return (
     <footer>
-      <div className="flex gap-20 mx-20">
+      <div className="flex gap-10 mx-20">
         <div className="flex flex-1 flex-col gap-2">
           <span className="text-lg pb-2 font-semibold text-gray-600 border-b-2 border-b-gray-200">
             SUN-WA TECHNOS (VIETNAM) CO., LTD
@@ -104,7 +105,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col flex-1">
           <span className="text-lg pb-2 font-semibold text-gray-600 border-b-2 border-b-gray-200">
             POLICY
           </span>
@@ -132,36 +133,31 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="h-5 bg-gray-200">
-        <div>
+      <div className="h-7 bg-gray-200 flex justify-between items-center px-20">
+        <div className="text-sm text-gray-600">
           <span>© Copyright 2022 - Sunwa.com.vn - Designed by Webico</span>
         </div>
-        <div>
+        <div className="flex  gap-7">
           <div>
             <Image src={founder1} alt="fouder1"></Image>
           </div>
-        </div>
-        <div>
+
           <div>
             <Image src={founder2} alt="fouder2"></Image>
           </div>
-        </div>
-        <div>
+
           <div>
             <Image src={founder3} alt="fouder3"></Image>
           </div>
-        </div>
-        <div>
+
           <div>
             <Image src={founder4} alt="fouder4"></Image>
           </div>
-        </div>
-        <div>
+
           <div>
             <Image src={founder5} alt="fouder5"></Image>
           </div>
-        </div>
-        <div>
+
           <div>
             <Image src={founder6} alt="fouder6"></Image>
           </div>
