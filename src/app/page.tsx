@@ -1,13 +1,15 @@
+import { Suspense } from "react";
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import {
   Hero,
-  Product,
-  Origin,
   News,
+  Origin,
   Partner,
+  Product,
   Promotion,
 } from "../components/sections";
-import Footer from "../components/Footer";
+import Loading from "./loading";
 
 const page = () => {
   return (
@@ -16,10 +18,12 @@ const page = () => {
       <main>
         <Hero />
         <Product />
-        <Origin />
-        <News />
-        <Partner />
-        <Promotion />
+        <Suspense fallback={<Loading />}>
+          <Origin />
+          <News />
+          <Partner />
+          <Promotion />
+        </Suspense>
       </main>
       <Footer />
     </>
