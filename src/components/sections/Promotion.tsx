@@ -11,7 +11,7 @@ const Promotion = () => {
           alt="about-us"
           className="lg:ml-80 object-cover object-[0%_40%]"
           fill
-        ></Image>
+        />
         <div className="absolute z-1 inset-0 bg-[linear-gradient(to_right,#a9d8a1_0%,#a9d8a1_80%,#1fa85633_100%)] lg:bg-[linear-gradient(to_right,#a9d8a1_0%,#a9d8a1_50%,#1fa85633_100%)]"></div>
         <div className="z-5 absolute left-5 lg:left-72 top-10 flex gap-2 flex-col">
           <div className="flex flex-col">

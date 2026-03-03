@@ -5,7 +5,7 @@ import OMRON from "../../../public/products-images/OMRON.jpg";
 import KOGANEI from "../../../public/products-images/KOGANEI.jpg";
 import MINEBIA from "../../../public/products-images/MINEBIA.jpg";
 import KEL from "../../../public/products-images/KEL.jpg";
-const PRODUCTS = [
+const products = [
   { name: "YASKAWA", image: YASKAWA },
   { name: "OMRON", image: OMRON },
   { name: "KOGANEI", image: KOGANEI },
@@ -23,7 +23,7 @@ const Product = () => {
       </div>
 
       <div className="bg-gray-100 mx-10 mt-2 py-8 flex flex-col lg:flex-row items-center justify-evenly gap-5 border-b-2 border-b-gray-200 lg:px-10 lg:mx-0">
-        {PRODUCTS.map((item) => (
+        {products.map((item) => (
           <div
             key={item.name}
             className="flex flex-col bg-white items-center text-center p-4"

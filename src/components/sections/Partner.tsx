@@ -24,9 +24,9 @@ const Partner = () => {
   return (
     <section>
       <div className="flex  mt-15 mx-10 justify-between pb-2 border-b-3 border-b-gray-200">
-        <Image src={title1} alt="design" className="hidden lg:inline"></Image>
+        <Image src={title1} alt="design" className="hidden lg:inline"/>
         <h2 className="text-2xl font-semibold text-gray-700">OUR PARTNER</h2>
-        <Image src={title1} alt="design" className="hidden lg:inline"></Image>
+        <Image src={title1} alt="design" className="hidden lg:inline"/>
       </div>
       <div className="flex flex-col justify-center lg:w-auto lg:flex-row items-center border border-gray-200 gap-5 mx-10 px-5 relative py-10 lg:py-20">
         {partners.map((partner, index) => (

@@ -48,7 +48,7 @@ const Origin = () => {
             src={origin}
             alt="Sunva"
             className="w-auto h-80 lg:h-full object-cover object-[60%_50%]"
-          ></Image>
+          />
         </div>
       </div>
     </section>

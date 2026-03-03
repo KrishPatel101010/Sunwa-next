@@ -8,12 +8,7 @@ import menu from "../../public/navbar-images/menu.png";
 import search from "../../public/navbar-images/search-icon.png";
 import country from "../../public/navbar-images/united kingdom.png";
 
-type NavItem = {
-  label: string;
-  href: string;
-};
-
-const NAV_ITEMS: NavItem[] = [
+const nav_items = [
   { label: "HOME", href: "/" },
   { label: "INTRODUCE", href: "/" },
   { label: "PRODUCTS", href: "/" },
@@ -27,14 +22,14 @@ const Navbar = () => {
       <nav className="border-b-3 border-b-gray-100 w-full overflow-hidden">
         {/* Upper Nav */}
         <div className="flex flex-col lg:flex-row mx-5 lg:mx-10 py-3 lg:items-center justify-between">
-          <Image src={logo} alt="logo" className="flex self-center"></Image>
+          <Image src={logo} alt="logo" className="flex self-center"/>
           <div className="flex">
             <ul className="flex flex-col lg:flex-row self-center font-semibold list-none">
-              {NAV_ITEMS.map((item, index) => (
+              {nav_items.map((item, index) => (
                 <li
                   key={item.label}
                   className={`lg:px-10 ${
-                    index !== NAV_ITEMS.length - 1
+                    index !== nav_items.length - 1
                       ? "lg:border-r border-r-black"
                       : ""
                   } ${index === 0 ? "text-primary" : ""}`}
@@ -47,12 +42,12 @@ const Navbar = () => {
               src={search}
               alt="search-icon"
               className="hidden lg:inline"
-            ></Image>
+            />
             <Image
               className="py-3 ml-4 mr-1 hidden lg:inline"
               src={country}
               alt="country-flag"
-            ></Image>
+            />
             <select name="language-selector" className="hidden lg:inline">
               <option defaultValue="english" value="english">
                 English
@@ -65,23 +60,23 @@ const Navbar = () => {
         <div className="flex my-2 justify-between lg:mx-7">
           <div className="flex gap-2">
             <div className="flex self-center mx-3 py-3.5 px-3 lg:pr-40 bg-gray-100 font-bold text-gray-600">
-              <Image className="mx-1" src={menu} alt="menu-icon"></Image>
+              <Image className="mx-1" src={menu} alt="menu-icon"/>
               <span className="hidden lg:inline">CATEGORY</span>
             </div>
             <div className="lg:flex self-center hidden">
-              <Image src={home} alt="home-icon"></Image>
+              <Image src={home} alt="home-icon"/>
               <span className="text-gray-500">Home</span>
             </div>
           </div>
           <div className="flex px-2 font-medium gap-5">
             <div className="flex gap-2 self-center">
-              <Image src={invoice} alt="invoice-icon"></Image>
+              <Image src={invoice} alt="invoice-icon"/>
               <span className="self-center hidden lg:inline">
                 Request a quote
               </span>
             </div>
             <div className="flex gap-2 self-center">
-              <Image src={cart} alt="cart-icon"></Image>
+              <Image src={cart} alt="cart-icon"/>
               <span className="self-center hidden lg:inline">Cart</span>
             </div>
             <button type="button">Login</button>

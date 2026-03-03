@@ -79,7 +79,7 @@ const Footer = () => {
             </li>
           </ul>
           <div className="my-5">
-            <Image src={logo} alt="logo"></Image>
+            <Image src={logo} alt="logo"/>
           </div>
         </div>
         <div className="flex flex-2 flex-col">

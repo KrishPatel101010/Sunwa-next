@@ -5,7 +5,7 @@ import money from "../../../public/services-images/money.png";
 import safety from "../../../public/services-images/safety.png";
 import support from "../../../public/services-images/support.png";
 
-const FEATURES = [
+const features = [
   { title: "EASINESS", description: "Financial transitions", icon: money },
   { title: "SUPPORT", description: "24 hour on day", icon: support },
   { title: "FREESHIP", description: "Within the city", icon: delivery },
@@ -24,7 +24,7 @@ const Hero = () => {
       </div>
       <div className="flex flex-col gap-10 mt-15 justify-around mx-20 lg:mx-0 lg:px-60 lg:flex-row">
         <div className="flex flex-col gap-10 lg:flex-row">
-          {FEATURES.map((item) => (
+          {features.map((item) => (
             <div
               key={item.title}
               className="flex items-center flex-1 gap-4 px-7 py-4 border border-gray-200"
