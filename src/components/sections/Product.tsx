@@ -1,11 +1,17 @@
 import Image from "next/image";
 import title from "../../../public/products-images/Title.png";
-import product1 from "../../../public/products-images/product1.jpg";
-import product2 from "../../../public/products-images/product2.jpg";
-import product3 from "../../../public/products-images/product3.jpg";
-import product4 from "../../../public/products-images/product4.jpg";
-import product5 from "../../../public/products-images/product5.jpg";
-
+import YASKAWA from "../../../public/products-images/YASKAWA.jpg";
+import OMRON from "../../../public/products-images/OMRON.jpg";
+import KOGANEI from "../../../public/products-images/KOGANEI.jpg";
+import MINEBIA from "../../../public/products-images/MINEBIA.jpg";
+import KEL from "../../../public/products-images/KEL.jpg";
+const PRODUCTS = [
+  { name: "YASKAWA", image: YASKAWA },
+  { name: "OMRON", image: OMRON },
+  { name: "KOGANEI", image: KOGANEI },
+  { name: "MINEBIA", image: MINEBIA },
+  { name: "KEL", image: KEL },
+];
 const Product = () => {
   return (
     <section className="my-10">
@@ -16,65 +22,24 @@ const Product = () => {
         </h2>
       </div>
 
-      <div className="bg-gray-100 mx-10 mt-2 py-8 flex items-center flex-col justify-evenly border-b-2 border-b-gray-200 lg:px-10 lg:flex-row gap-5 lg:mx-0">
-        <div className="flex flex-col bg-white items-center">
+      <div className="bg-gray-100 mx-10 mt-2 py-8 flex flex-col lg:flex-row items-center justify-evenly gap-5 border-b-2 border-b-gray-200 lg:px-10 lg:mx-0">
+        {PRODUCTS.map((item) => (
           <div
-            className="
-          h-50 w-50 relative"
+            key={item.name}
+            className="flex flex-col bg-white items-center text-center p-4"
           >
-            <Image
-              src={product1}
-              alt="product1"
-              fill
-              className="object-contain"
-            ></Image>
+            <div className="relative w-48 h-48">
+              <Image
+                src={item.image}
+                alt={item.name}
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            <span className="font-medium mt-3">{item.name}</span>
           </div>
-          <span className="font-medium text-center">YASKAWA</span>
-        </div>
-        <div className="flex flex-col bg-white text-center">
-          <div className="h-50 w-50 relative">
-            <Image
-              src={product2}
-              alt="product2"
-              fill
-              className="object-cover"
-            ></Image>
-          </div>
-          <span className="font-medium">OMRON</span>
-        </div>
-        <div className="flex flex-col bg-white text-center">
-          <div className="h-50 w-50 relative">
-            <Image
-              src={product3}
-              alt="product3"
-              fill
-              className="object-cover"
-            ></Image>
-          </div>
-          <span className="font-medium">KOGANEI</span>
-        </div>
-        <div className="flex flex-col bg-white text-center">
-          <div className="h-50 w-50 relative">
-            <Image
-              src={product4}
-              alt="product4"
-              fill
-              className="object-cover"
-            ></Image>
-          </div>
-          <span className="font-medium">MINEBIA</span>
-        </div>
-        <div className="flex flex-col bg-white text-center">
-          <div className="h-50 w-50 relative">
-            <Image
-              src={product5}
-              alt="product5"
-              fill
-              className="object-cover"
-            ></Image>
-          </div>
-          <span className="font-medium">KEL</span>
-        </div>
+        ))}
       </div>
       <div className="-mt-7 flex justify-center">
         <button
