@@ -16,7 +16,7 @@ import logo from "../../public/navbar-images/header-logo.png";
 const Footer = () => {
   return (
     <footer>
-      <div className="flex gap-10 mx-20">
+      <div className="flex flex-col mx-10 lg:flex-row gap-10 lg:mx-20">
         <div className="flex flex-1 flex-col gap-2">
           <span className="text-lg pb-2 font-semibold text-gray-600 border-b-2 border-b-gray-200">
             SUN-WA TECHNOS (VIETNAM) CO., LTD
@@ -40,7 +40,7 @@ const Footer = () => {
               </p>
             </li>
           </ul>
-          <div>
+          <div className="my-5">
             <Image src={logo} alt="logo"></Image>
           </div>
         </div>
@@ -133,11 +133,11 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="h-7 bg-gray-200 flex justify-between items-center px-20">
+      <div className="h-10 lg:h-7 bg-gray-200 flex justify-between items-center px-5 lg:px-20">
         <div className="text-sm text-gray-600">
           <span>© Copyright 2022 - Sunwa.com.vn - Designed by Webico</span>
         </div>
-        <div className="flex  gap-7">
+        <div className="lg:flex hidden gap-7">
           <div>
             <Image src={founder1} alt="fouder1"></Image>
           </div>
