@@ -16,9 +16,12 @@ const Product = () => {
         </h2>
       </div>
 
-      <div className="bg-gray-100 mt-2 py-8 flex justify-evenly border-b-2 border-b-gray-200 lg:px-10">
-        <div className="flex flex-col bg-white text-center">
-          <div className="h-50 w-50 relative">
+      <div className="bg-gray-100 mx-10 mt-2 py-8 flex items-center flex-col justify-evenly border-b-2 border-b-gray-200 lg:px-10 lg:flex-row gap-5 lg:mx-0">
+        <div className="flex flex-col bg-white items-center">
+          <div
+            className="
+          h-50 w-50 relative"
+          >
             <Image
               src={product1}
               alt="product1"
@@ -26,7 +29,7 @@ const Product = () => {
               className="object-contain"
             ></Image>
           </div>
-          <span className="font-medium">YASKAWA</span>
+          <span className="font-medium text-center">YASKAWA</span>
         </div>
         <div className="flex flex-col bg-white text-center">
           <div className="h-50 w-50 relative">

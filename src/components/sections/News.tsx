@@ -12,7 +12,7 @@ const News = () => {
         <Image src={title} alt="design" />
         <h2 className="text-2xl font-semibold text-gray-700">HOT NEWS</h2>
       </div>
-      <div className="flex my-5 justify-evenly lg:px-10">
+      <div className="flex flex-col gap-5 my-5 justify-evenly items-center lg:gap-0 lg:px-10 lg:flex-row">
         <div className="flex flex-col ring-2 ring-gray-100 bg-white w-65">
           <div className="h-60 w-full relative">
             <Image

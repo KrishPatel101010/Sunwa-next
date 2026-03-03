@@ -8,10 +8,15 @@ import support from "../../../public/services-images/support.png";
 const Hero = () => {
   return (
     <section>
-      <div className="my-5 lg:mx-10">
-        <Image src={hero} alt="company's visual"></Image>
+      <div className="my-5 lg:mx-10 relative h-80 lg:h-87.5">
+        <Image
+          src={hero}
+          alt="company's visual"
+          fill
+          className="object-cover lg:object-contain"
+        />
       </div>
-      <div className="flex gap-10 mt-15 justify-around lg:px-60">
+      <div className="flex flex-col gap-10 mt-15 justify-around mx-20 lg:mx-0 lg:px-60 lg:flex-row">
         <div className="flex justify-center flex-1 gap-4 px-7 py-4 border border-gray-200">
           <Image src={money} alt="money-icon"></Image>
           <div>

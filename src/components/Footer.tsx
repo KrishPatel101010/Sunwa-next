@@ -1,16 +1,16 @@
 import Image from "next/image";
-import logo from "../../public/navbar-images/header-logo.png";
 import Link from "next/link";
-import youtube from "../../public/footer-images/socials-images/Youtube.png";
+import founder2 from "../../public/footer-images/founders-names-images/Giới thiệu.png";
+import founder5 from "../../public/footer-images/founders-names-images/Liên hệ.png";
+import founder3 from "../../public/footer-images/founders-names-images/Sản phẩm.png";
+import founder4 from "../../public/footer-images/founders-names-images/Tin tức.png";
+import founder1 from "../../public/footer-images/founders-names-images/Trang chủ.png";
+import founder6 from "../../public/footer-images/founders-names-images/tài liệu.png";
 import facebook from "../../public/footer-images/socials-images/Facebook.png";
 import flickr from "../../public/footer-images/socials-images/Flickr.png";
 import twitter from "../../public/footer-images/socials-images/Twitter.png";
-import founder1 from "../../public/footer-images/founders-names-images/Trang chủ.png";
-import founder2 from "../../public/footer-images/founders-names-images/Giới thiệu.png";
-import founder3 from "../../public/footer-images/founders-names-images/Sản phẩm.png";
-import founder4 from "../../public/footer-images/founders-names-images/Tin tức.png";
-import founder5 from "../../public/footer-images/founders-names-images/Liên hệ.png";
-import founder6 from "../../public/footer-images/founders-names-images/tài liệu.png";
+import youtube from "../../public/footer-images/socials-images/Youtube.png";
+import logo from "../../public/navbar-images/header-logo.png";
 // import list from "../../public/footer-images/list-style.png";
 
 const Footer = () => {

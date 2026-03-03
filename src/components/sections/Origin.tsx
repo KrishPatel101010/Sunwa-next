@@ -4,7 +4,7 @@ import origin from "../../../public/origin-images/origin.jpg";
 const Origin = () => {
   return (
     <section>
-      <div className="flex gap-40 lg:mx-10">
+      <div className="flex px-10 my-10 flex-col gap-10 lg:gap-40 lg:mx-10 lg:flex-row lg:px-0">
         <div className="flex-1 py-5">
           <h2 className="text-3xl text-primary font-semibold pb-5">
             THE ORIGIN OF THE NAME SUN-WA
@@ -20,7 +20,8 @@ const Origin = () => {
             <br />
             The “sun” in SUN-WA can be read as the sun in the sky, representing
             future prosperity for our company. SUN-WA is also the
-            transliteration of the Japanese “三和” meaning “three in harmony.”<br />
+            transliteration of the Japanese “三和” meaning “three in harmony.”
+            <br />
             Since SUN-WA was founded, the three elements that our company has
             strived to keep in harmony and develop are our customers, our
             shareholders and our employees; as well as electrics, electronics
@@ -33,13 +34,21 @@ const Origin = () => {
             it is our mission to promote industry and foster a prosperous
             society.”
           </p>
-          <div className="flex justify-center">
-
-          <button className="border border-primary text-primary px-10 py-1" type="button">READ MORE</button>
+          <div className="flex mt-10 justify-center">
+            <button
+              className="border border-primary text-primary px-15 py-1"
+              type="button"
+            >
+              READ MORE
+            </button>
           </div>
         </div>
-        <div className="flex-1 relative">
-          <Image src={origin} alt="Sunva" fill className="object-cover object-[60%_50%]"></Image>
+        <div className="flex-1">
+          <Image
+            src={origin}
+            alt="Sunva"
+            className="w-auto h-80 lg:h-full object-cover object-[60%_50%]"
+          ></Image>
         </div>
       </div>
     </section>
