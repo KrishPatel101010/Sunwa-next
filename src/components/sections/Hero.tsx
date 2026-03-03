@@ -5,6 +5,12 @@ import money from "../../../public/services-images/money.png";
 import safety from "../../../public/services-images/safety.png";
 import support from "../../../public/services-images/support.png";
 
+const FEATURES = [
+  { title: "EASINESS", description: "Financial transitions", icon: money },
+  { title: "SUPPORT", description: "24 hour on day", icon: support },
+  { title: "FREESHIP", description: "Within the city", icon: delivery },
+  { title: "WARRENTY", description: "+ 365 days", icon: safety },
+];
 const Hero = () => {
   return (
     <section>
@@ -17,33 +23,20 @@ const Hero = () => {
         />
       </div>
       <div className="flex flex-col gap-10 mt-15 justify-around mx-20 lg:mx-0 lg:px-60 lg:flex-row">
-        <div className="flex justify-center flex-1 gap-4 px-7 py-4 border border-gray-200">
-          <Image src={money} alt="money-icon"></Image>
-          <div>
-            <p className="text-primary font-medium">EASINESS</p>
-            <span>Financial transitions</span>
-          </div>
-        </div>
-        <div className="flex justify-center flex-1 gap-4 px-7 py-4 border border-gray-200">
-          <Image src={support} alt="money-icon"></Image>
-          <div>
-            <p className="text-primary font-medium">SUPPORT</p>
-            <span>24 hour on day</span>
-          </div>
-        </div>
-        <div className="flex justify-center flex-1 gap-4 px-7 py-4 border border-gray-200">
-          <Image src={delivery} alt="money-icon"></Image>
-          <div>
-            <p className="text-primary font-medium">FREESHIP</p>
-            <span>Within the city</span>
-          </div>
-        </div>
-        <div className="flex justify-center flex-1 gap-4 px-7 py-4 border border-gray-200">
-          <Image src={safety} alt="money-icon"></Image>
-          <div>
-            <p className="text-primary font-medium">WARRENTY</p>
-            <span>+ 365 days</span>
-          </div>
+        <div className="flex flex-col gap-10 lg:flex-row">
+          {FEATURES.map((item) => (
+            <div
+              key={item.title}
+              className="flex items-center flex-1 gap-4 px-7 py-4 border border-gray-200"
+            >
+              <Image src={item.icon} alt={item.title} />
+
+              <div className="">
+                <p className="text-primary font-medium">{item.title}</p>
+                <span className="">{item.description}</span>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
